@@ -33,6 +33,10 @@ nav a {
     text-decoration: none;
     position: relative;
 }
+nav a:hover{
+    color: #8b5cf6;
+    transition: 0.3s;
+}
 
 nav a::after {
     content: "";
@@ -429,6 +433,10 @@ footer {
     transform: translateY(0);
 }
 
+.precos h2{
+    margin-bottom: 30px;
+}
+
 /* RESPONSIVO */
 @media (max-width: 900px) {
 
@@ -441,6 +449,9 @@ footer {
     .hero-img img {
         width: 250px;
         margin-top: 30px;
+    }
+    .hero-buttons{
+        justify-content: center;
     }
 
     .cards-preco {
