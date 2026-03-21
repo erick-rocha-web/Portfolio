@@ -42,7 +42,9 @@ const observer = new IntersectionObserver((entries) => {
         }
 
     });
-}, { threshold: 0.2 });
+}, {
+    threshold: 0.15
+});
 
 elements.forEach(el => {
     el.classList.add("hidden");
