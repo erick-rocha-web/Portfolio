@@ -12,48 +12,76 @@ body {
 }
 
 /* ================= HEADER ================= */
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
     position: fixed;
+    top: 20px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
     z-index: 1000;
+    display: flex;
+    justify-content: center;
 }
 
+/* CONTAINER CENTRAL */
+.header-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 25px;
+    background: rgba(17, 17, 17, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+/* LOGO */
+.logo {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.logo span {
+    color: #8b5cf6;
+}
+
+/* NAV */
 nav {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    position: relative;
-}
-
-nav a:hover {
-    color: #8b5cf6;
-}
-
-nav a::after {
-    content: "";
-    width: 0;
-    height: 2px;
-    background: #8b5cf6;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
+    font-size: 14px;
+    opacity: 0.7;
     transition: 0.3s;
 }
 
-nav a:hover::after {
-    width: 100%;
+nav a:hover {
+    opacity: 1;
+    color: #8b5cf6;
 }
 
+/* BOTÃO HEADER */
+.btn-header {
+    background: #8b5cf6;
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* MENU MOBILE */
 .menu-toggle {
     display: none;
     font-size: 24px;

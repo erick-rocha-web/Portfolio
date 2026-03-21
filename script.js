@@ -25,9 +25,9 @@ const header = document.getElementById("header");
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-        header.style.background = "rgba(0,0,0,0.9)";
+        header.style.transform = "scale(0.95)";
     } else {
-        header.style.background = "rgba(0,0,0,0.6)";
+        header.style.transform = "scale(1)";
     }
 });
 const elements = document.querySelectorAll("section");
