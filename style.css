@@ -187,7 +187,7 @@ nav a:hover {
 .btn-primary {
     background: #8b5cf6;
     padding: 12px 24px;
-    border-radius: 8px;
+    border-radius: 20px;
     color: white;
     border: none;
     cursor: pointer;
