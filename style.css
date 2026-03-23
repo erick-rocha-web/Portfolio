@@ -262,13 +262,18 @@ nav a:hover {
     flex: 1;
     display: flex;
     justify-content: center;
+    animation: float 3s ease-in-out infinite;
+    
 }
 
 .sobre-img img {
     width: 280px;
     border-radius: 20px;
     border: 3px solid #8b5cf6;
+    box-shadow: 0 10px 100px rgba(139, 92, 246, 0.4);
 }
+
+
 
 
 /* ================= PROJETOS ================= */
@@ -456,36 +461,45 @@ footer {
 }
 
 /* ================= RESPONSIVO ================= */
-@media (max-width: 900px) {
+/* ================= RESPONSIVIDADE AVANÇADA ================= */
+
+/* TABLETS (até 1024px) */
+@media (max-width: 1024px) {
 
     .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 100px 20px;
+        padding: 0 40px;
+        gap: 30px;
+        height: 700px;
     }
 
-    .hero-img img {
-        width: 250px;
-        margin-top: 30px;
+    .hero-text h1 {
+        font-size: 38px;
     }
 
-    .hero-buttons {
-        justify-content: center;
+    .sobre-container {
+        gap: 40px;
     }
 
-    .cards-preco {
-        flex-direction: column;
+    .grid-projetos {
+        grid-template-columns: repeat(3, 1fr);
     }
 
+}
+
+/* MOBILE GRANDE (até 768px) */
+@media (max-width: 768px) {
+
+    /* HEADER */
     nav {
         position: absolute;
-        top: 70px;
-        right: 0;
+        top: 80px;
+        right: 20px;
         background: #111;
         flex-direction: column;
         width: 200px;
         display: none;
         padding: 20px;
+        border-radius: 12px;
     }
 
     nav.active {
@@ -496,12 +510,25 @@ footer {
         display: block;
     }
 
-    .grid-projetos {
-        display: flex;
+    /* HERO */
+    .hero {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+        padding: 120px 20px 60px;
+        height: 100%;
     }
 
+    .hero-img img {
+        width: 250px;
+        margin-top: 30px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* SOBRE */
     .sobre-container {
         flex-direction: column;
         text-align: center;
@@ -510,4 +537,77 @@ footer {
     .sobre-img img {
         width: 220px;
     }
+
+    /* PROJETOS */
+    .grid-projetos {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .card {
+        max-width: 320px;
+        width: 100%;
+    }
+
+}
+
+/* MOBILE PEQUENO (até 480px) */
+@media (max-width: 480px) {
+
+    .hero-text h1 {
+        font-size: 26px;
+    }
+
+    
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        
+        text-align: center;
+    }
+
+    header .btn-primary{
+        max-width: 150px;
+        text-align: center;
+        margin: 0 10px;
+        
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card-img {
+        height: 150px;
+    }
+
+}
+
+/* TELAS GRANDES / TV (acima de 1400px) */
+@media (min-width: 1400px) {
+
+    .projetos {
+        max-width: 1300px;
+    }
+
+    .grid-projetos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 56px;
+    }
+
+    .hero-img img {
+        width: 420px;
+    }
+    
+    .hero{
+        height: 900px;
+    }
+
 }
